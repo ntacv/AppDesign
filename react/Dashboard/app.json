@@ -11,7 +11,9 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -19,15 +21,25 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.ntacv.Dashboard"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-
     "packagerOpts": {
       "config": "metro.config.js",
-      "sourceExts": ["js", "jsx", "css", "scss"]
+      "sourceExts": [
+        "js",
+        "jsx",
+        "css",
+        "scss"
+      ]
+    },
+    "extra": {
+      "eas": {
+        "projectId": "32c023a9-9546-4112-b47a-966bc71974a2"
+      }
     }
   }
 }
