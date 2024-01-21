@@ -19,7 +19,9 @@ export default function App() {
   });
 
   return (
-    <View style={{ width: "100%", backgroundColor: colors.light }}>
+    <View
+      style={{ width: "100%", height: "100%", backgroundColor: colors.light }}
+    >
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Homepage" component={Homepage} />

@@ -40,14 +40,12 @@ export default StyleSheet.create({
   },
   contentBack: {
     width: "100%",
-    height: "100%",
     backgroundColor: colors.primary,
   },
   content: {
     backgroundColor: colors.light,
     borderTopLeftRadius: "70px",
     overflow: "hidden",
-    height: "100%",
   },
 
   imageBackground: {

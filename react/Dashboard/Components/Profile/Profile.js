@@ -68,7 +68,10 @@ export default function Profile({ navigation }) {
           <br />
           <br />
           <CardGroup />
-
+          <br />
+          <br />
+          <br />
+          <br />
           <TouchableOpacity
             style={style.nextButton}
             onPress={() => navigation.goBack()}
