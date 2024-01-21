@@ -2,9 +2,13 @@
   <head>
     <title>AppDesign</title>
     <style>
+      @import url("../react/Dashboard/assets/styles/fonts/Josefin.ttf");
+      @font-face {
+        font-family: "Josefin";
+        src: url("../react/Dashboard/assets/styles/fonts/Josefin.ttf");
+      }
       html {
-        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-family: "Josefin", "Lucida Sans", Geneva, Verdana, sans-serif;
       }
       body {
         padding: none;
@@ -38,6 +42,10 @@
         text-align: center;
         color: white;
         line-height: 0.5em;
+      }
+      h2 {
+        font-weight: 300;
+        font-size: 15px;
       }
 
       .description-box {
@@ -84,12 +92,12 @@
       <div class="profil-background">
         <img src="" />
         <div class="title-box">
-          <h1>Title</h1>
-          <h2>Sub</h2>
+          <h1>Dashboard</h1>
+          <h2>For ordinary people</h2>
         </div>
       </div>
       <div class="description-box">
-        <h3>WELCOME</h3>
+        <h3>Welcome to Dashboard</h3>
         <p>A platform to</p>
       </div>
       <button>Next -></button>
