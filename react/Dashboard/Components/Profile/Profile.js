@@ -29,7 +29,7 @@ export default function Profile({ navigation }) {
         <View style={style.iconsHeader}>
           <MaterialIcons
             name="settings"
-            size={30}
+            size={33}
             color={colors.primaryOpaque}
           />
           <MaterialCommunityIcons
@@ -49,11 +49,23 @@ export default function Profile({ navigation }) {
         <br></br>
         <View style={{ width: "80%" }}>
           <Title color={colors.light}>Nathan Chouk</Title>
-          <Text style={{ color: colors.primaryOpaque, textAlign: "center" }}>
+          <Text
+            style={{
+              color: colors.primaryOpaque,
+              textAlign: "center",
+              fontFamily: "Poppins",
+            }}
+          >
             nta.ckn@gmail.com
           </Text>
           <Hr />
-          <Text style={{ color: colors.primaryOpaque, textAlign: "center" }}>
+          <Text
+            style={{
+              color: colors.primaryOpaque,
+              textAlign: "center",
+              fontFamily: "Poppins",
+            }}
+          >
             This is my bio and thank you for taking time to read it as it means
             a lot to me.
           </Text>

@@ -34,11 +34,26 @@ export default function CardInfo(props) {
         */}
         <Ionicons name={props.name} size={24} color={colors.primary} />
       </View>
-      <View>
-        <Text style={{ color: colors.primary, textTransform: "uppercase" }}>
+      <View style={{ display: "flex", justifyContent: "center" }}>
+        <Text
+          style={{
+            color: colors.primary,
+            textTransform: "uppercase",
+            fontSize: "15px",
+            fontFamily: "PoppinsBold",
+          }}
+        >
           {props.name}
         </Text>
-        <Text>{props.children}</Text>
+        <Text
+          style={{
+            color: colors.primary,
+            fontFamily: "Poppins",
+            fontSize: "13px",
+          }}
+        >
+          {props.children}
+        </Text>
       </View>
     </View>
   );

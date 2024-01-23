@@ -10,6 +10,8 @@ import {
 
 import Title from "../../Components/TextComponents/Title.js";
 import icon_back from "../../assets/adaptive-icon.png";
+
+import profilPicture from "../../assets/images/profile.jpg";
 import { AntDesign } from "@expo/vector-icons";
 
 import styled from "styled-components/native";
@@ -26,17 +28,34 @@ export default function Homepage({ navigation }) {
   return (
     <View style={{ backgroundColor: colors.light }}>
       <View style={{ height: "600px", ...style.header }}>
-        <Image source={icon_back} style={style.imageBackground} />
+        <Image source={profilPicture} style={style.imageBackground} />
 
         <View style={style.flexCenter}>
           <Title color={colors.light}>Dashboard</Title>
-          <Text style={style.text}>For ordinary people</Text>
+          <Text
+            style={{
+              color: colors.light,
+              fontSize: "18px",
+              fontFamily: "PoppinsLight",
+            }}
+          >
+            For ordinary people
+          </Text>
         </View>
       </View>
       <View style={style.description}>
-        <Title fontSize={"25px"}>Welcome to Dashboard</Title>
+        <Title fontSize={"25px"} fontFamily={"SFdisplay"}>
+          Welcome to Dashboard
+        </Title>
         <br></br>
-        <Text style={{ textAlign: "center", color: colors.primary }}>
+        <Text
+          style={{
+            textAlign: "center",
+            color: colors.primary,
+            fontSize: "18px",
+            fontFamily: "Poppins",
+          }}
+        >
           A platform for ordinary people with ideas that can can the world. Meet
           people, join groups, chat online and be a part of creating next big
           thing.
@@ -48,7 +67,15 @@ export default function Homepage({ navigation }) {
           style={style.nextButton}
           onPress={() => navigation.navigate("Profil")}
         >
-          <Text style={{ fontSize: "25px", color: colors.primary }}>Next</Text>
+          <Text
+            style={{
+              fontSize: "25px",
+              color: colors.primary,
+              fontFamily: "PoppinsMedium",
+            }}
+          >
+            Next
+          </Text>
           <AntDesign
             name="arrowright"
             size={24}

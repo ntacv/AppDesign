@@ -6,7 +6,7 @@ export default function Hr() {
   return (
     <View
       style={{
-        borderBottomColor: colors.primaryOpaque,
+        borderBottomColor: "rgba(159, 191, 244, 0.50)",
         borderBottomWidth: 1,
         width: "100%",
         marginTop: "30px",

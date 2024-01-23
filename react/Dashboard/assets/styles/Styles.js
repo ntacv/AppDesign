@@ -1,6 +1,13 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Appearance } from "react-native";
+import Theme from "../../App.js";
+import useTheme from "../../App.js";
+import { useContext } from "react";
+import {
+  ThemeContext,
+  colors as ThemeColor,
+} from "../../Components/Context/ThemeContext.js";
 
-export const colors = {
+const lightColors = {
   primary: "#166FFF",
   primaryOpaque: "#9FBFF4",
   primaryLight: "#E5EFFF",
@@ -9,6 +16,17 @@ export const colors = {
   dark: "black",
   green: "#6AEE67",
 };
+const darkColors = {
+  primary: "#E5EFFF",
+  primaryOpaque: "#9FBFF4",
+  primaryLight: "#166FFF",
+  secondary: "red",
+  light: "black",
+  dark: "white",
+  green: "#6AEE67",
+};
+
+export const colors = darkColors;
 
 export default StyleSheet.create({
   homepage: {
@@ -18,16 +36,13 @@ export default StyleSheet.create({
 
   h1: {
     color: colors.light,
-    fontFamily: "Montserrat",
+    fontFamily: "Poppins",
     fontSize: "40px",
     fontWeight: "bold",
     textAlign: "center",
   },
 
-  text: {
-    color: colors.light,
-    fontFamily: "monospace",
-  },
+  text: {},
 
   header: {
     width: "100%",

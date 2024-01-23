@@ -12,6 +12,7 @@ export default function Title(props) {
           ...style.h1,
           color: props.color ? props.color : colors.primary,
           fontSize: props.fontSize ? props.fontSize : "40px",
+          fontFamily: props.fontFamily ? props.fontFamily : "Poppins",
         }}
       >
         {props.children}
