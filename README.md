@@ -31,13 +31,19 @@ The container component
 The navigation context lets define the different pages of the app. The buttons can then redirect the screen to a different component page
 To use button actions to move between pages,
 
+
+
 info cards 
 card group
 
 For the information under the profile, the design looks like similar blocs where only the icon and the text changes. This part of code can be added as a component and reused as multiple times. To change the icon and text inside, props are added to the declaration and references a kind of component. The ```type``` prop give the title and the icon of the ```InfoCard```. The ```chilrdren``` prop gives the description and can be added inside the component tag. 
 To better manage those cards, they are grouped in a ```CardGroup``` component and then imported as a part of the app. 
 
-- bonus part
+- **Bonus part**
 settings and theme
 
-As a bonus, a settings page has been added. it uses the profile page template and adds dark theme buttons. thoses buttons trigger a react context change of state 
+As a bonus, a settings page has been added. it uses the profile page template and adds dark theme buttons. 
+part of the template are: one cornered background, title and description styling and top page icons. 
+The gear icon in the top of the profile page redirect to the settings page. 
+
+thoses buttons trigger a react context change of state 
