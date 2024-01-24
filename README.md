@@ -12,17 +12,20 @@ w (to start the web server)
 ```
 
 
-- choice of design
-For this project i chose the first figma design. It is a representation of a profile application with two main screens: one introduction to the app and one profile page with information about the user. 
-It has a main blue theme, large buttons and a list of information card. the structure is pretty simple as there is no scrolling needed and only two parts of the app has a special background. 
+- Choice of design
+For this project, I chose the first figma design. It is a representation of a profile application with two main screens: one introduction to the app and one profile page with information about the user. 
+It has a main blue theme, large buttons and a list of information cards. The structure is pretty simple as there is no scrolling needed and only two parts of the app has a special background. 
 
-- what technology
-the developping is done in react native with javascript files and javascript styling. to add icons and useful methods, imports of packages are done with npm. the app uses a react antive framework called expo, it helps us build and ship the app easily. 
-the render was mainly cheked on web preview because of android run errors. 
+- What technology
+The developping is done in react native with javascript files and javascript styling. To add icons and useful methods, imports of packages are done with npm. The app uses a react native framework called expo, it helps us build and ship the app easily. 
+The render was mainly cheked on web preview because of android run errors. 
 
-- how it has been done
+- How it has been done
 complexe parts
 
+navigation
+To change pages by clicking on buttons, a navigation stack has been added. It is a react native navigation package that allows to create a stack of pages and navigate through them.
+The container component 
 info cards 
 card group
 
