@@ -26,8 +26,16 @@ complexe parts
 navigation
 To change pages by clicking on buttons, a navigation stack has been added. It is a react native navigation package that allows to create a stack of pages and navigate through them.
 The container component 
+
+
+The navigation context lets define the different pages of the app. The buttons can then redirect the screen to a different component page
+To use button actions to move between pages,
+
 info cards 
 card group
+
+For the information under the profile, the design looks like similar blocs where only the icon and the text changes. This part of code can be added as a component and reused as multiple times. To change the icon and text inside, props are added to the declaration and references a kind of component. The ```type``` prop give the title and the icon of the ```InfoCard```. The ```chilrdren``` prop gives the description and can be added inside the component tag. 
+To better manage those cards, they are grouped in a ```CardGroup``` component and then imported as a part of the app. 
 
 - bonus part
 settings and theme
