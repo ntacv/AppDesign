@@ -3,6 +3,8 @@ Application design course projects A4S8
 
 this react native application is a copy of a figma prototype. 
 
+IMAGES
+
 ```
 git clone the project 
 cd AppDesign

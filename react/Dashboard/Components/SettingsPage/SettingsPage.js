@@ -34,10 +34,38 @@ export default function Profile({ navigation }) {
 
   var txt = theme;
 
+  const lightColors = {
+    primary: "#166FFF",
+    primaryOpaque: "#9FBFF4",
+    primaryLight: "#E5EFFF",
+    primaryDark: "#1055C4",
+    secondary: "red",
+    light: "white",
+    dark: "black",
+    green: "#6AEE67",
+    //
+    dark_back: "#011029",
+    dark_cards: "#00235C",
+  };
+  const darkColors = {
+    primary: "#E5EFFF",
+    primaryOpaque: "#9FBFF4",
+    primaryLight: "#166FFF",
+    secondary: "red",
+    light: "#011029",
+    dark: "white",
+    green: "#6AEE67",
+    //
+    dark_back: "#011029",
+    dark_cards: "#00235C",
+  };
+
+  const colors = theme === "light" ? lightColors : darkColors;
+
   return (
     <View style={{ backgroundColor: colors.light, height: "100vh" }}>
       <View style={style.header}>
-        <View style={{ ...style.iconsHeader, display: "hidden" }}>
+        <View style={{ opacity: 0, ...style.iconsHeader }}>
           <MaterialIcons
             name="settings"
             size={33}
@@ -49,16 +77,44 @@ export default function Profile({ navigation }) {
             color={colors.primaryOpaque}
           />
         </View>
+        <br />
+        <View>
+          <Image source={profilPicture} style={style.imageProfile} />
+          <View
+            style={{ ...style.activityIcon, ...style.activityIconBack }}
+          ></View>
+          <View style={style.activityIcon}></View>
+        </View>
+        <br></br>
         <View style={{ width: "80%" }}>
           <Title color={colors.light}>Settings</Title>
+          <Hr />
+          <Text
+            style={{
+              color: colors.primaryOpaque,
+              textAlign: "center",
+              fontFamily: "Poppins",
+              fontSize: "14px",
+            }}
+          >
+            Settings to change the theme of the app
+          </Text>
         </View>
+        <br />
+        <br />
         <br />
       </View>
       <View style={style.contentBack}>
-        <View style={style.content}>
+        <View
+          style={{
+            backgroundColor:
+              theme === "light" ? colors.light : colors.dark_back,
+            borderTopLeftRadius: "70px",
+            overflow: "hidden",
+          }}
+        >
           <br />
           <br />
-          <Text>{txt}</Text>
           <br />
           <View
             style={{

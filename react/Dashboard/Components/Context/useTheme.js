@@ -17,7 +17,7 @@ export default function useTheme() {
     } else {
       colorsTheme = "dark";
     }
-    //console.log("colorsTheme: " + colorsTheme);
+    console.log("colorsTheme: " + colorsTheme);
   };
 
   const setDarkMode = () => {

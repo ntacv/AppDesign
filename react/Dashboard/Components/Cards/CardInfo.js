@@ -32,7 +32,7 @@ export default function CardInfo(props) {
         time
         calendar-outline 
         */}
-        <Ionicons name={props.name} size={24} color={colors.primary} />
+        <Ionicons name={props.name} size={32} color={colors.primary} />
       </View>
       <View style={{ display: "flex", justifyContent: "center" }}>
         <Text

@@ -5,6 +5,7 @@ import useFonts from "expo-font";
 import * as Font from "expo-font";
 import { StyleSheet, Text, View, useColorScheme, useState } from "react-native";
 import { useContext } from "react";
+import Style from "./assets/styles/Styles.js";
 import Homepage from "./Components/Homepage/Homepage";
 import Profile from "./Components/Profile/Profile";
 import SettingsPage from "./Components/SettingsPage/SettingsPage.js";
@@ -51,8 +52,8 @@ export default function App() {
       <ThemeProvider>
         <NavigationContainer>
           <Stack.Navigator screenOptions={{ headerShown: false }}>
-            <Stack.Screen name="Profile" component={Profile} />
             <Stack.Screen name="Homepage" component={Homepage} />
+            <Stack.Screen name="Profile" component={Profile} />
             <Stack.Screen name="Settings" component={SettingsPage} />
           </Stack.Navigator>
         </NavigationContainer>

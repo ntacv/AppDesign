@@ -38,12 +38,12 @@ export default function Profile({ navigation }) {
         <View style={style.iconsHeader}>
           <MaterialIcons
             name="settings"
-            size={33}
+            size={36}
             color={colors.primaryOpaque}
           />
           <MaterialCommunityIcons
             name="bell"
-            size={30}
+            size={32}
             color={colors.primaryOpaque}
           />
           <TouchableOpacity
@@ -52,7 +52,6 @@ export default function Profile({ navigation }) {
           ></TouchableOpacity>
           <TouchableOpacity
             style={{ ...style.iconButton, ...style.iconButtonRight }}
-            onPress={() => navigation.goBack()}
           ></TouchableOpacity>
         </View>
         <br />

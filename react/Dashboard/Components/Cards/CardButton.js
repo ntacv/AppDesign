@@ -20,21 +20,24 @@ export default function CardInfo(props) {
         setTheme(props.theme);
       }}
       style={{
-        backgroundColor: colors.primaryLight,
+        backgroundColor:
+          theme === "light" ? colors.primaryLight : colors.dark_cards,
         width: "40%",
+        height: "70px",
         borderRadius: "20px",
         padding: "10px",
         display: "flex",
         flexDirection: "row",
         justifyContent: "center",
+        alignItems: "center",
         gap: "10px",
       }}
     >
       <View
         style={{
           backgroundColor: colors.primaryOpaque,
-          width: "30px",
-          height: "30px",
+          width: "40px",
+          height: "40px",
           borderRadius: "10px",
           display: "flex",
           alignItems: "center",
@@ -46,14 +49,18 @@ export default function CardInfo(props) {
         time
         calendar-outline 
         */}
-        <Ionicons name={props.name} size={24} color={colors.primary} />
+        <Ionicons
+          name={props.theme === "light" ? "bulb" : "bed"}
+          size={24}
+          color={theme === "light" ? colors.primary : colors.light}
+        />
       </View>
       <View style={{ display: "flex", justifyContent: "center" }}>
         <Text
           style={{
-            color: colors.primary,
+            color: theme === "light" ? colors.primary : colors.light,
             textTransform: "uppercase",
-            fontSize: "15px",
+            fontSize: "12px",
             fontFamily: "PoppinsBold",
           }}
         >
@@ -61,7 +68,7 @@ export default function CardInfo(props) {
         </Text>
         <Text
           style={{
-            color: colors.primary,
+            color: theme === "light" ? colors.primary : colors.light,
             fontFamily: "PoppinsMedium",
             fontSize: "20px",
             textTransform: "uppercase",

@@ -30,7 +30,7 @@ export default function Homepage({ navigation }) {
     <View style={{ backgroundColor: colors.light, height: "100vh" }}>
       <View
         style={{
-          height: "500px",
+          height: "550px",
           backgroundColor: colors.primaryDark,
           ...style.header,
         }}
