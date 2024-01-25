@@ -21,11 +21,8 @@ The developping is done in react native with javascript files and javascript sty
 The render was mainly cheked on web preview because of android run errors. 
 
 - **How it has been done**
-
 Navigation
 To change pages by clicking on buttons, a navigation stack has been added. It is a react native navigation package that allows to create a stack of pages and navigate through them. The buttons can then redirect the screen to a different component page. 
-
-
 Info cards 
 For the information under the profile, the design looks like similar blocs where only the icon and the text changes. This part of code can be added as a component and reused as multiple times. To change the icon and text inside, props are added to the declaration and references a kind of component. The ```type``` prop give the title and the icon of the ```InfoCard```. The ```chilrdren``` prop gives the description and can be added inside the component tag. 
 To better manage those cards, they are grouped in a ```CardGroup``` component and then imported as a part of the app. 
@@ -40,3 +37,5 @@ The gear icon in the top of the profile page redirect to the settings page.
 thoses buttons trigger a react context change of state 
 I have tried to contorle the theme colors without changing the styling i have defined from the beginning of the project. 
 It made the use of theming harder as i cannot controle the js variable in the style file without putting them in a funtion. 
+
+To improve the experience, the email adresse under the profil picture is clickable and linked to a new email. The adresse in the ```Text``` component is contained in a button that use the ```Linking``` package. The link is a ```mailto``` link that opens the default email app with the adresse as recipient.  
