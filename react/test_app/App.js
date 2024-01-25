@@ -7,6 +7,7 @@ import { StyleSheet, Text, View } from "react-native";
 import Homepage from "./Components/Homepage/Homepage.js";
 import Profile from "./Components/Profile/Profile.js";
 import { default as style, colors } from "./assets/styles/Styles.js";
+import { ThemeProvider } from "./Components/Context/ThemeContext.js";
 //import styles from "./assets/styles/App.module.css";
 //import styles from "./App.css";
 
@@ -22,10 +23,13 @@ export default function App() {
     <View
       style={{ width: "100%", height: "100%", backgroundColor: colors.light }}
     >
+      <ThemeProvider>
+        <Homepage />
+      </ThemeProvider>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="Homepage" component={Homepage} />
-          <Stack.Screen name="Profil" component={Profile} />
+          <Stack.Screen name="Homepage" component={Profile} />
+          <Stack.Screen name="Profile" component={Profile} />
         </Stack.Navigator>
       </NavigationContainer>
     </View>

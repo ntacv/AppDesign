@@ -27,11 +27,17 @@ export default function Profile({ navigation }) {
     <View style={{ backgroundColor: colors.light }}>
       <View style={style.header}>
         <View style={style.iconsHeader}>
-          <MaterialIcons
-            name="settings"
-            size={30}
-            color={colors.primaryOpaque}
-          />
+          <Text>hello</Text>
+          <TouchableOpacity
+            style={style.iconButton}
+            onPress={() => navigation.goBack()}
+          >
+            <MaterialIcons
+              name="settings"
+              size={30}
+              color={colors.primaryOpaque}
+            />
+          </TouchableOpacity>
           <MaterialCommunityIcons
             name="bell"
             size={30}

@@ -17,6 +17,7 @@ import { AntDesign } from "@expo/vector-icons";
 import styled from "styled-components/native";
 
 import { default as style, colors } from "../../assets/styles/Styles.js";
+import MainButton from "../MainButton.js";
 
 const Text_centered = styled.Text`
   font-size: 18px;
@@ -26,8 +27,14 @@ const Text_centered = styled.Text`
 
 export default function Homepage({ navigation }) {
   return (
-    <View style={{ backgroundColor: colors.light }}>
-      <View style={{ height: "600px", ...style.header }}>
+    <View style={{ backgroundColor: colors.light, height: "100vh" }}>
+      <View
+        style={{
+          height: "500px",
+          backgroundColor: colors.primaryDark,
+          ...style.header,
+        }}
+      >
         <Image source={profilPicture} style={style.imageBackground} />
 
         <View style={style.flexCenter}>
@@ -52,8 +59,9 @@ export default function Homepage({ navigation }) {
           style={{
             textAlign: "center",
             color: colors.primary,
-            fontSize: "18px",
+            fontSize: "17px",
             fontFamily: "Poppins",
+            lineHeight: "25px",
           }}
         >
           A platform for ordinary people with ideas that can can the world. Meet
@@ -62,28 +70,9 @@ export default function Homepage({ navigation }) {
         </Text>
       </View>
 
-      <View>
-        <TouchableOpacity
-          style={style.nextButton}
-          onPress={() => navigation.navigate("Profil")}
-        >
-          <Text
-            style={{
-              fontSize: "25px",
-              color: colors.primary,
-              fontFamily: "PoppinsMedium",
-            }}
-          >
-            Next
-          </Text>
-          <AntDesign
-            name="arrowright"
-            size={24}
-            color={colors.primary}
-            style={{ position: "absolute", right: "40px" }}
-          />
-        </TouchableOpacity>
-      </View>
+      <MainButton type="next" navigation={navigation}>
+        Next
+      </MainButton>
     </View>
   );
 }

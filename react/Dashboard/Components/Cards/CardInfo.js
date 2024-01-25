@@ -43,7 +43,11 @@ export default function CardInfo(props) {
             fontFamily: "PoppinsBold",
           }}
         >
-          {props.name}
+          {props.name === "calendar"
+            ? "Agenda"
+            : props.name === "time"
+            ? "Local time"
+            : "Location"}
         </Text>
         <Text
           style={{

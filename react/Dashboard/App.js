@@ -47,19 +47,16 @@ export default function App() {
   });
 
   return (
-    <View
-      style={{ width: "100%", height: "100%", backgroundColor: colors.light }}
-    >
+    <View style={{ width: "100%", height: "100%" }}>
       <ThemeProvider>
-        <SettingsPage />
+        <NavigationContainer>
+          <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="Profile" component={Profile} />
+            <Stack.Screen name="Homepage" component={Homepage} />
+            <Stack.Screen name="Settings" component={SettingsPage} />
+          </Stack.Navigator>
+        </NavigationContainer>
       </ThemeProvider>
-      <Profile />
-      <NavigationContainer>
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="Homepage" component={Homepage} />
-          <Stack.Screen name="Profil" component={Profile} />
-        </Stack.Navigator>
-      </NavigationContainer>
     </View>
   );
 }

@@ -1,33 +1,16 @@
 //import { useState } from "react-native";
 import { createContext, useState } from "react";
+import { lightColors, darkColors } from "../../assets/styles/Styles";
+
 const ThemeContext = createContext();
 
 function ThemeProvider(props) {
   const [theme, setTheme] = useState("light");
   console.log("theme: " + theme);
 
-  const lightColors = {
-    primary: "#166FFF",
-    primaryOpaque: "#9FBFF4",
-    primaryLight: "#E5EFFF",
-    secondary: "red",
-    light: "white",
-    dark: "black",
-    green: "#6AEE67",
-  };
-  const darkColors = {
-    primary: "#E5EFFF",
-    primaryOpaque: "#9FBFF4",
-    primaryLight: "#166FFF",
-    secondary: "red",
-    light: "black",
-    dark: "white",
-    green: "#6AEE67",
-  };
-
   //const isDark = Appearance.getColorScheme() === "dark";
   //const colorsTheme = isDark ? darkColors : lightColors;
-  var colorsTheme = "light";
+  //var colorsTheme = "light";
 
   const isTheme = () => {
     const { theme, setTheme } = useContext(ThemeContext);

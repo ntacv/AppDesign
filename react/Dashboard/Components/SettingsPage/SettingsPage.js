@@ -13,6 +13,7 @@ import Hr from "../Hr.js";
 import CardInfo from "../Cards/CardInfo.js";
 import CardGroup from "../Cards/CardGroup.js";
 import CardButton from "../Cards/CardButton.js";
+import MainButton from "../MainButton.js";
 import Title from "../TextComponents/Title.js";
 import icon_back from "../../assets/adaptive-icon.png";
 import { AntDesign } from "@expo/vector-icons";
@@ -34,9 +35,9 @@ export default function Profile({ navigation }) {
   var txt = theme;
 
   return (
-    <View style={{ backgroundColor: colors.light }}>
+    <View style={{ backgroundColor: colors.light, height: "100vh" }}>
       <View style={style.header}>
-        <View style={style.iconsHeader}>
+        <View style={{ ...style.iconsHeader, display: "hidden" }}>
           <MaterialIcons
             name="settings"
             size={33}
@@ -73,24 +74,11 @@ export default function Profile({ navigation }) {
           </View>
           <br />
           <br />
-          <br />
-          <br />
-          <TouchableOpacity
-            style={style.nextButton}
-            onPress={() => navigation.goBack()}
-          >
-            <Text style={{ fontSize: "25px", color: colors.primary }}>
-              Back
-            </Text>
-            <AntDesign
-              name="arrowleft"
-              size={24}
-              color={colors.primary}
-              style={{ position: "absolute", right: "40px" }}
-            />
-          </TouchableOpacity>
         </View>
       </View>
+      <MainButton type={"back"} navigation={navigation}>
+        Back
+      </MainButton>
     </View>
   );
 }

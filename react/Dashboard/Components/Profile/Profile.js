@@ -6,6 +6,7 @@ import {
   Image,
   Button,
   TouchableOpacity,
+  Linking,
 } from "react-native";
 
 import Hr from "../../Components/Hr.js";
@@ -20,11 +21,19 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import profilPicture from "../../assets/images/profile.jpg";
 
 import { default as style, colors } from "../../assets/styles/Styles.js";
+import MainButton from "../MainButton.js";
+
+const email = "mailto://nta.ckn@gmail.com";
 
 export default function Profile({ navigation }) {
   //console.log(colors);
   return (
-    <View style={{ backgroundColor: colors.light }}>
+    <View
+      style={{
+        backgroundColor: colors.light,
+        height: "100vh",
+      }}
+    >
       <View style={style.header}>
         <View style={style.iconsHeader}>
           <MaterialIcons
@@ -37,8 +46,16 @@ export default function Profile({ navigation }) {
             size={30}
             color={colors.primaryOpaque}
           />
+          <TouchableOpacity
+            style={style.iconButton}
+            onPress={() => navigation.navigate("Settings")}
+          ></TouchableOpacity>
+          <TouchableOpacity
+            style={{ ...style.iconButton, ...style.iconButtonRight }}
+            onPress={() => navigation.goBack()}
+          ></TouchableOpacity>
         </View>
-        <br></br>
+        <br />
         <View>
           <Image source={profilPicture} style={style.imageProfile} />
           <View
@@ -49,21 +66,24 @@ export default function Profile({ navigation }) {
         <br></br>
         <View style={{ width: "80%" }}>
           <Title color={colors.light}>Nathan Chouk</Title>
-          <Text
-            style={{
-              color: colors.primaryOpaque,
-              textAlign: "center",
-              fontFamily: "Poppins",
-            }}
-          >
-            nta.ckn@gmail.com
-          </Text>
+          <TouchableOpacity onPress={() => Linking.openURL(email)}>
+            <Text
+              style={{
+                color: colors.primaryOpaque,
+                textAlign: "center",
+                fontFamily: "Poppins",
+              }}
+            >
+              nta.ckn@gmail.com
+            </Text>
+          </TouchableOpacity>
           <Hr />
           <Text
             style={{
               color: colors.primaryOpaque,
               textAlign: "center",
               fontFamily: "Poppins",
+              fontSize: "14px",
             }}
           >
             This is my bio and thank you for taking time to read it as it means
@@ -82,24 +102,12 @@ export default function Profile({ navigation }) {
           <CardGroup />
           <br />
           <br />
-          <br />
-          <br />
-          <TouchableOpacity
-            style={style.nextButton}
-            onPress={() => navigation.goBack()}
-          >
-            <Text style={{ fontSize: "25px", color: colors.primary }}>
-              Back
-            </Text>
-            <AntDesign
-              name="arrowleft"
-              size={24}
-              color={colors.primary}
-              style={{ position: "absolute", right: "40px" }}
-            />
-          </TouchableOpacity>
         </View>
       </View>
+
+      <MainButton type="back" navigation={navigation}>
+        Back
+      </MainButton>
     </View>
   );
 }
