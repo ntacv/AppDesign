@@ -3,11 +3,7 @@ Application design course projects A4S8
 
 This react native application is a copy of a figma prototype with some added features. 
 
-## Screenshots of the app
-
-![dashboard_profile](react/Dashboard/assets/images/dashbaord_profile.png)
-![dashboard_profile](react/Dashboard/assets/images/dashboard_profile.png)
-
+## Use the app
 ```
 git clone the project 
 cd AppDesign
@@ -16,7 +12,7 @@ npm start or npx expo start
 w (to start the web server)
 ```
 
-
+## Project report
 - **Choice of design**
 For this project, I chose the first figma design. It is a representation of a profile application with two main screens: one introduction to the app and one profile page with information about the user. 
 It has a main blue theme, large buttons and a list of information cards. The structure is pretty simple as there is no scrolling needed and only two parts of the app has a special background. 
@@ -44,3 +40,12 @@ I have tried to contorle the theme colors without changing the styling i have de
 It made the use of theming harder as i cannot controle the js variable in the style file without putting them in a funtion. 
 
 To improve the experience, the email adresse under the profil picture is clickable and linked to a new email. The adresse in the ```Text``` component is contained in a button that use the ```Linking``` package. The link is a ```mailto``` link that opens the default email app with the adresse as recipient.  
+
+
+## Screenshots of the app
+
+![dashboard_profile](react/Dashboard/assets/images/dashbaord_profile.png)
+![dashboard_profile](react/Dashboard/assets/images/dashboard_profile.png)
+![dashboard_profile](react/Dashboard/assets/images/dashboard_home.png)
+![dashboard_profile](react/Dashboard/assets/images/dashboard_profile_dark.png)
+![dashboard_profile](react/Dashboard/assets/images/dashboard_settings_dark.png)
