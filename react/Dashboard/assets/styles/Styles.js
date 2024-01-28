@@ -8,6 +8,12 @@ import {
   colorsTheme,
 } from "../../Components/Context/ThemeContext.js";
 
+//import { ThemeContext } from "../../Components/Context/ThemeContext.js";
+
+//export const colors = lightColors;
+
+//const { theme, setTheme, colors } = useContext(ThemeContext);
+
 export const lightColors = {
   primary: "#166FFF",
   primaryOpaque: "#9FBFF4",
@@ -36,123 +42,131 @@ export const darkColors = {
 
 export const colors = lightColors;
 
-export default StyleSheet.create({
-  homepage: {
-    color: colors.secondary,
-    textAlign: "center",
-  },
+export { style as default };
 
-  h1: {
-    color: colors.light,
-    fontFamily: "Poppins",
-    fontSize: "35px",
-    fontWeight: "bold",
-    textAlign: "center",
-    letterSpacing: "0.02em",
-  },
+export const style = //(props) =>
+  StyleSheet.create({
+    homepage: {
+      color: colors.secondary,
+      textAlign: "center",
+    },
 
-  text: {},
+    textgreen: {
+      //color: props.colors_raw,
+      textAlign: "center",
+    },
 
-  header: {
-    width: "100%",
-    borderBottomRightRadius: "70px",
-    overflow: "hidden",
-    backgroundColor: colors.primary,
-    color: colors.light,
-    display: "flex",
-    alignItems: "center",
-  },
-  contentBack: {
-    width: "100%",
-    backgroundColor: colors.primary,
-  },
-  content: {
-    backgroundColor: colors.light,
-    borderTopLeftRadius: "70px",
-    overflow: "hidden",
-  },
+    h1: {
+      color: colors.light,
+      fontFamily: "Poppins",
+      fontSize: "35px",
+      fontWeight: "bold",
+      textAlign: "center",
+      letterSpacing: "0.02em",
+    },
 
-  imageBackground: {
-    position: "absolute",
-    width: "100%",
-    height: "100%",
-    opacity: 0.3,
-  },
-  imageProfile: {
-    width: "100px",
-    height: "100px",
-    borderRadius: "27px",
-    overflow: "hidden",
-  },
+    text: {},
 
-  flexCenter: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    height: "100%",
-  },
+    header: {
+      width: "100%",
+      borderBottomRightRadius: "70px",
+      overflow: "hidden",
+      backgroundColor: colors.primary,
+      color: colors.light,
+      display: "flex",
+      alignItems: "center",
+    },
+    contentBack: {
+      width: "100%",
+      backgroundColor: colors.primary,
+    },
+    content: {
+      //backgroundColor: colors.light,
+      borderTopLeftRadius: "70px",
+      overflow: "hidden",
+    },
 
-  description: {
-    padding: "50px",
-    textAlign: "center",
-  },
+    imageBackground: {
+      position: "absolute",
+      width: "100%",
+      height: "100%",
+      opacity: 0.3,
+    },
+    imageProfile: {
+      width: "100px",
+      height: "100px",
+      borderRadius: "27px",
+      overflow: "hidden",
+    },
 
-  nextButton: {
-    backgroundColor: colors.primaryOpaque,
-    margin: "auto",
-    width: "60%",
-    height: "50px",
-    borderRadius: "50px",
-    overflow: "hidden",
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  nextButtonContainer: {
-    position: "absolute",
-    bottom: "40px",
-    width: "100%",
-    height: "50px",
-  },
+    flexCenter: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      height: "100%",
+    },
 
-  iconButton: {
-    position: "absolute",
-    top: "-30px",
-    left: "-60px",
-    backgroundColor: "rgba(0, 0, 0, 0)",
-    width: "140px",
-    height: "100px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  iconButtonRight: {
-    left: "auto",
-    right: "-60px",
-  },
+    description: {
+      padding: "50px",
+      textAlign: "center",
+    },
 
-  iconsHeader: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    width: "85%",
-    marginTop: "30px",
-  },
-  activityIcon: {
-    backgroundColor: colors.green,
-    width: "20px",
-    height: "20px",
-    borderRadius: "50%",
-    position: "absolute",
-    right: "5px",
-    top: "5px",
-  },
-  activityIconBack: {
-    backgroundColor: colors.primary,
-    width: "30px",
-    height: "30px",
-    right: "0px",
-    top: "0px",
-  },
-});
+    nextButton: {
+      backgroundColor: colors.primaryOpaque,
+      margin: "auto",
+      width: "60%",
+      height: "50px",
+      borderRadius: "50px",
+      overflow: "hidden",
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    nextButtonContainer: {
+      position: "absolute",
+      bottom: "40px",
+      width: "100%",
+      height: "50px",
+    },
+
+    iconButton: {
+      position: "absolute",
+      top: "-30px",
+      left: "-60px",
+      backgroundColor: "rgba(0, 0, 0, 0)",
+      width: "140px",
+      height: "100px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    iconButtonRight: {
+      left: "auto",
+      right: "-60px",
+    },
+
+    iconsHeader: {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-between",
+      width: "85%",
+      marginTop: "30px",
+    },
+    activityIcon: {
+      backgroundColor: colors.green,
+      width: "20px",
+      height: "20px",
+      borderRadius: "50%",
+      position: "absolute",
+      right: "5px",
+      top: "5px",
+    },
+    activityIconBack: {
+      backgroundColor: colors.primary,
+      width: "30px",
+      height: "30px",
+      right: "0px",
+      top: "0px",
+    },
+  });

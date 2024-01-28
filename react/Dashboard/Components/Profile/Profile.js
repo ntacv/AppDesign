@@ -20,12 +20,16 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import profilPicture from "../../assets/images/profile.jpg";
 
-import { default as style, colors } from "../../assets/styles/Styles.js";
+import { default as style } from "../../assets/styles/Styles.js";
 import MainButton from "../MainButton.js";
+
+import { useContext } from "react";
+import { ThemeContext } from "../../Components/Context/ThemeContext.js";
 
 const email = "mailto://nta.ckn@gmail.com";
 
 export default function Profile({ navigation }) {
+  const { theme, setTheme, colors } = useContext(ThemeContext);
   //console.log(colors);
   return (
     <View
@@ -94,7 +98,13 @@ export default function Profile({ navigation }) {
         <br />
       </View>
       <View style={style.contentBack}>
-        <View style={style.content}>
+        <View
+          style={{
+            backgroundColor:
+              theme === "light" ? colors.light : colors.dark_back,
+            ...style.content,
+          }}
+        >
           <br />
           <br />
           <br />

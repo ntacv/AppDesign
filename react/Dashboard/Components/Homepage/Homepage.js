@@ -16,8 +16,11 @@ import { AntDesign } from "@expo/vector-icons";
 
 import styled from "styled-components/native";
 
-import { default as style, colors } from "../../assets/styles/Styles.js";
+import { default as style_raw } from "../../assets/styles/Styles.js";
 import MainButton from "../MainButton.js";
+
+import { useContext } from "react";
+import { ThemeContext } from "../../Components/Context/ThemeContext.js";
 
 const Text_centered = styled.Text`
   font-size: 18px;
@@ -26,6 +29,11 @@ const Text_centered = styled.Text`
 `;
 
 export default function Homepage({ navigation }) {
+  const { theme, setTheme, colors } = useContext(ThemeContext);
+
+  var colors_raw = "green";
+  const style = style_raw; //({ colors_raw });
+
   return (
     <View style={{ backgroundColor: colors.light, height: "100vh" }}>
       <View
@@ -36,7 +44,6 @@ export default function Homepage({ navigation }) {
         }}
       >
         <Image source={profilPicture} style={style.imageBackground} />
-
         <View style={style.flexCenter}>
           <Title color={colors.light}>Dashboard</Title>
           <Text

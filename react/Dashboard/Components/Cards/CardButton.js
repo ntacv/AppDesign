@@ -1,15 +1,15 @@
 import React, { useContext } from "react";
 import { View, Text, Alert, TouchableOpacity } from "react-native";
-import { colors } from "../../assets/styles/Styles";
 
 import useTheme from "../../App.js";
 import { Ionicons } from "@expo/vector-icons";
 import txt from "../../App.js";
 
 import { ThemeContext } from "../../Components/Context/ThemeContext.js";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
-export default function CardInfo(props) {
-  const { theme, setTheme } = useContext(ThemeContext);
+export default function CardButton(props) {
+  const { theme, setTheme, colors } = useContext(ThemeContext);
 
   return (
     <TouchableOpacity
@@ -68,7 +68,7 @@ export default function CardInfo(props) {
         </Text>
         <Text
           style={{
-            color: theme === "light" ? colors.primary : colors.light,
+            color: colors.primary,
             fontFamily: "PoppinsMedium",
             fontSize: "20px",
             textTransform: "uppercase",

@@ -30,40 +30,17 @@ import { useContext } from "react";
 export default function Profile({ navigation }) {
   //console.log(colors);
 
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { theme, setTheme, colors } = useContext(ThemeContext);
 
   var txt = theme;
 
-  const lightColors = {
-    primary: "#166FFF",
-    primaryOpaque: "#9FBFF4",
-    primaryLight: "#E5EFFF",
-    primaryDark: "#1055C4",
-    secondary: "red",
-    light: "white",
-    dark: "black",
-    green: "#6AEE67",
-    //
-    dark_back: "#011029",
-    dark_cards: "#00235C",
-  };
-  const darkColors = {
-    primary: "#E5EFFF",
-    primaryOpaque: "#9FBFF4",
-    primaryLight: "#166FFF",
-    secondary: "red",
-    light: "#011029",
-    dark: "white",
-    green: "#6AEE67",
-    //
-    dark_back: "#011029",
-    dark_cards: "#00235C",
-  };
-
-  const colors = theme === "light" ? lightColors : darkColors;
-
   return (
-    <View style={{ backgroundColor: colors.light, height: "100vh" }}>
+    <View
+      style={{
+        backgroundColor: theme === "light" ? colors.light : colors.dark_back,
+        height: "100vh",
+      }}
+    >
       <View style={style.header}>
         <View style={{ opacity: 0, ...style.iconsHeader }}>
           <MaterialIcons
