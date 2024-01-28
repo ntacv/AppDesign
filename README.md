@@ -5,6 +5,9 @@ this react native application is a copy of a figma prototype.
 
 IMAGES
 
+![dashboard_profile](react/Dashboard/assets/images/dashbaord_profile.png)
+![dashboard_profile](react\Dashboard\assets\images\dashboard_profile_dark.png)
+
 ```
 git clone the project 
 cd AppDesign
