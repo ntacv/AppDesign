@@ -15,6 +15,7 @@ w (to start the web server)
 ## Project report
 - **Choice of design**
 For this project, I chose the first figma design. It is a representation of a profile application with two main screens: one introduction to the app and one profile page with information about the user. <br/>
+
 It has a main blue theme, large buttons and a list of information cards. The structure is pretty simple as there is no scrolling needed and only two parts of the app has a special background. 
 
 - **What technology**
@@ -50,3 +51,10 @@ To improve the experience, the email adresse under the profil picture is clickab
 ![dashboard_profile](react/Dashboard/assets/images/dashboard_profile_dark.png)
 ![dashboard_profile](react/Dashboard/assets/images/dashboard_settings_dark.png)
 ![dashboard_profile](react/Dashboard/assets/images/dashbaord_profile.png)
+
+
+## Sources 
+Thanks to those!
+- https://blog.openreplay.com/control-dark-mode-in-react-native-with-the-context-api/
+- https://thoughtbot.com/blog/react-native-dark-mode
+- https://reactnavigation.org/docs/navigating/
